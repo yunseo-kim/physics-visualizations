@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2021 Youjun Hu (https://github.com/Youjunhu/Youjunhu.github.io/blob/main/figures/wave_packet1.plt)
+# Copyright (c) 2021 Youjun Hu (original work: https://github.com/Youjunhu/Youjunhu.github.io/blob/main/figures/wave_packet1.plt)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@
 # SOFTWARE.
 
 set term gif size 350,262 animate delay 15
-set output "wave_packet.gif"
+set output "../figs/wave_packet.gif"
 set samples 1000
 set xrange [0:20]
 set title  "wave packet with Vg>Vp"
@@ -33,9 +33,10 @@ k0=5
 omega0=pi/20. #omega0/k0 is the phase velocity
 vg=pi/20. #group velocity
 do for [i=0:100] {
-t=i*1.0
-plot  exp(-(x-4-vg*t)**2/(4.*dx**2))*cos(k0*x-omega0*t) lw 3 lc rgb "green" notitle,  exp(-(x-4-vg*t)**2/(4.*dx**2)) lw 3 lc rgb "blue" notitle,-exp(-(x-4-vg*t)**2/(4.*dx**2)) lw 3 lc rgb "blue" notitle
-
+    t=i*1.0
+    plot  exp(-(x-4-vg*t)**2/(4.*dx**2))*cos(k0*x-omega0*t) lw 2 lc rgb "green" notitle, \
+          exp(-(x-4-vg*t)**2/(4.*dx**2)) lw 2 lc rgb "blue" notitle, \
+         -exp(-(x-4-vg*t)**2/(4.*dx**2)) lw 2 lc rgb "blue" notitle
 }
 
 set output
