@@ -39,7 +39,7 @@
 <div id="container">
     <h1 id="title">Quantum Harmonic Oscillator: Probability Density</h1>
     <div id="slider-container">
-        <label for="n-slider">Energy Level \( n \): <span id="n-display">0</span></label>
+        <label for="n-slider">Energy Level (n): <span id="n-display">0</span></label>
         <input type="range" id="n-slider" min="0" max="100" value="0" step="1" style="width: 80%;">
     </div>
     <div id="plot"></div>
@@ -144,7 +144,8 @@ function updatePlot(n) {
             showgrid: true,
             gridwidth: 1,
             gridcolor: 'LightGray',
-            zeroline: false
+            zeroline: false,
+            showticklabels: false // Hide x-axis numerical values
         },
         yaxis: {
             title: 'Probability Density',
