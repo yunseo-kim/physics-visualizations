@@ -1,0 +1,12 @@
+# Python cache
+tools/__pycache__
+
+# IDE configurations
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+
+# ignore .DS_Store of macOS
+.DS_Store
