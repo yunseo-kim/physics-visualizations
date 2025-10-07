@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+plt.rcParams.update({'font.size': 16}) # 전역 폰트 크기 설정
+
 # ── 물리 상수 및 매개변수 ─────────────────────────────────
 G   = 6.67430e-11      # 중력 상수 [m^3 kg^-1 s^-2]
 rho = 5510            # 밀도 예시 [kg/m^3]
@@ -45,36 +47,36 @@ g[mask_shell] = (4 * np.pi * rho * G / 3) * (
 )
 
 # ── 그래프 그리기 ─────────────────────────────────────────
-plt.figure(figsize=(6,4))
+plt.figure(figsize=(12,8))
 plt.plot(R, Phi, label='Φ(R)')
-plt.xlabel('Radial distance R', labelpad=15)
-plt.ylabel('Gravitational potential Φ')
+plt.xlabel('Radial distance R', labelpad=30, fontsize=20)
+plt.ylabel('Gravitational potential Φ', fontsize=20)
 ax = plt.gca()
 ax.set_xticks([])                                   # x축 눈금 숫자 제거
 ax.set_yticks([])                                   # y축 눈금 숫자 제거
 ax.axvline(x=a, color='k', linestyle='--')          # R = a 점선
 ax.axvline(x=b, color='k', linestyle='--')          # R = b 점선
 ylim = ax.get_ylim()
-ax.text(a, ylim[0], 'a', ha='center', va='top')
-ax.text(b, ylim[0], 'b', ha='center', va='top')
-plt.title('Gravitational Potential as a Function of R')
+ax.text(a, ylim[0], 'a', ha='center', va='top', fontsize=18)
+ax.text(b, ylim[0], 'b', ha='center', va='top', fontsize=18)
+plt.title('Gravitational Potential as a Function of R', fontsize=24)
 plt.grid(True)
-plt.legend()
+plt.legend(fontsize=18)
 
-plt.figure(figsize=(6,4))
+plt.figure(figsize=(12,8))
 plt.plot(R, g, label='|g(R)|', color='C1')
-plt.xlabel('Radial distance R', labelpad=15)
-plt.ylabel('Magnitude of the field vector |g|')
+plt.xlabel('Radial distance R', labelpad=30, fontsize=20)
+plt.ylabel('Magnitude of the field vector |g|', fontsize=20)
 ax = plt.gca()
 ax.set_xticks([])                                   # x축 눈금 숫자 제거
 ax.set_yticks([])                                   # y축 눈금 숫자 제거
 ax.axvline(x=a, color='k', linestyle='--')          # R = a 점선
 ax.axvline(x=b, color='k', linestyle='--')          # R = b 점선
 ylim = ax.get_ylim()
-ax.text(a, ylim[0], 'a', ha='center', va='top')
-ax.text(b, ylim[0], 'b', ha='center', va='top')
-plt.title('Magnitude of the Field Vector as a Function of R')
+ax.text(a, ylim[0], 'a', ha='center', va='top', fontsize=18)
+ax.text(b, ylim[0], 'b', ha='center', va='top', fontsize=18)
+plt.title('Magnitude of the Field Vector as a Function of R', fontsize=24)
 plt.grid(True)
-plt.legend()
+plt.legend(fontsize=18)
 
 plt.show()
