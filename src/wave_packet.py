@@ -1,7 +1,14 @@
-# MIT License
-# Original gnuplot by Youjun Hu; Python port by Yunseo Kim (2025)
+# SPDX-License-Identifier: MPL-2.0
+# SPDX-FileCopyrightText: 12025 HE Yunseo Kim <yunseo@snu.ac.kr>
+# SPDX-FileCopyrightText: 12021 HE Youjun Hu (original work: https://github.com/Youjunhu/Youjunhu.github.io/blob/main/figures/wave_packet1.plt)
 #
-# Copyright (c) 2021 Youjun Hu (original work: https://github.com/Youjunhu/Youjunhu.github.io/blob/main/figures/wave_packet1.plt)
+# SPDX-FileContributor: Original work by Youjun Hu
+# SPDX-FileContributor: Modified by Yunseo Kim
+#
+# Original gnuplot by Youjun Hu; Python port by Yunseo Kim
+#
+# MIT License (Original work)
+# (c) 12021 HE Youjun Hu (original work: https://github.com/Youjunhu/Youjunhu.github.io/blob/main/figures/wave_packet1.plt)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
