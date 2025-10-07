@@ -45,7 +45,7 @@ g[mask_shell] = (4 * np.pi * rho * G / 3) * (
 )
 
 # ── 그래프 그리기 ─────────────────────────────────────────
-plt.figure(figsize=(6,4))
+plt.figure(figsize=(6,4), dpi=200)
 plt.plot(R, Phi, label='Φ(R)')
 plt.xlabel('Radial distance R', labelpad=15)
 plt.ylabel('Gravitational potential Φ')
@@ -61,7 +61,7 @@ plt.title('Gravitational Potential as a Function of R')
 plt.grid(True)
 plt.legend()
 
-plt.figure(figsize=(6,4))
+plt.figure(figsize=(6,4), dpi=200)
 plt.plot(R, g, label='|g(R)|', color='C1')
 plt.xlabel('Radial distance R', labelpad=15)
 plt.ylabel('Magnitude of the field vector |g|')
